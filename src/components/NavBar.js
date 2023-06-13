@@ -21,16 +21,16 @@ function NavBar() {
       {isAuth ?
         <button
           type="button"
-          onClick={logout}
-        >
-          Log uit
-        </button>
-        :
-        <div>
-          <button
-            type="button"
-            onClick={() => navigate('/signin')}
-          >
+              onClick={logout}
+              >
+              Log uit
+          </button>
+            :
+            <div>
+                <button
+                    type="button"
+                    onClick={() => navigate('/signin')}
+                >
             Log in
           </button>
           <button
