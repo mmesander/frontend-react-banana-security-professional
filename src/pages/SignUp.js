@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
 
 function SignUp() {
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -19,6 +20,7 @@ function SignUp() {
                 setEmail("");
                 setUsername("");
                 setPassword("");
+                navigate("/signin")
             }
         } catch (e) {
             console.error("Registratie mislukt!")
